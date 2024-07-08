@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Página para cantar</title>
+    <link rel="icon" href="assets/img/icon.png">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" integrity=" " crossorigin="">
+    <link rel="stylesheet" href="assets/css/icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-black">
+    <div class="container-fluid containerPrincipal">
+        <div class="col-lg-8 col-md-10 col-12 ingresarCancion">
+            <h4 class="text-center mb-3">Ingresá la letra de la canción <i class="bi bi-mic-fill"></i></h4>
+
+            <form id="formLetra">
+                <div class="imput-field">
+                    <textarea class="form-control campoForm" id="letra-field" placeholder="Ingresá la letra"></textarea>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-6 col-sm-4">
+                        <div class="dropup-center dropup">
+                            <button title="Velocidad" class="btn me-2 botonVel dropdown-toggle" tabindex="-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-speedometer iconoBoton"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-velocidad">
+                                <li><a class="dropdown-item" href="#" data-value="0.25">
+                                    0.25 <i class="bi bi-check-lg iconoSelect"></i></a>
+                                </li>
+                                <li><a class="dropdown-item" href="#" data-value="0.50">
+                                    0.50 <i class="bi bi-check-lg iconoSelect"></i></a>
+                                </li>
+                                <li><a class="dropdown-item" href="#" data-value="0.75">
+                                    0.75 <i class="bi bi-check-lg iconoSelect"></i></a>
+                                </li>
+                                <li><a class="dropdown-item" href="#" data-value="1.0">
+                                    1 <i class="bi bi-check-lg iconoSelect"></i></a>
+                                </li>
+                                <li><a class="dropdown-item" href="#" data-value="1.25">
+                                    1.25 <i class="bi bi-check-lg iconoSelect"></i></a>
+                                </li>
+                                <li><a class="dropdown-item" href="#" data-value="1.50">
+                                    1.50 <i class="bi bi-check-lg iconoSelect"></i></a>
+                                </li>
+                                <li><a class="dropdown-item" href="#" data-value="1.75">
+                                    1.75 <i class="bi bi-check-lg iconoSelect"></i></a>
+                                </li>
+                                <li><a class="dropdown-item" href="#" data-value="2.0">
+                                    2 <i class="bi bi-check-lg iconoSelect"></i></a>
+                                </li>
+                            </ul>
+
+                            <button title="Tamaño de letra" class="btn botonVel dropdown-toggle" id="dropdownMenuButton" tabindex="-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-fonts iconoBoton"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-letra">
+                              <li><a class="dropdown-item" href="#" data-value="1">
+                                1 <i class="bi bi-check-lg iconoSelect"></i></a></li>
+                              <li><a class="dropdown-item" href="#" data-value="2">
+                                2 <i class="bi bi-check-lg iconoSelect"></i></a></li>
+                              <li><a class="dropdown-item" href="#" data-value="3">
+                                3 <i class="bi bi-check-lg iconoSelect"></i></a></li>
+                              <li><a class="dropdown-item" href="#" data-value="4">
+                                4 <i class="bi bi-check-lg iconoSelect"></i></a></li>
+                              <li><a class="dropdown-item" href="#" data-value="5">
+                                5 <i class="bi bi-check-lg iconoSelect"></i></a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-6 col-sm-8 col-md-4 text-end">
+                        <button type="button" class="btn me-2 botonVel botonElim w-100 iconoBoton" onclick="resetForm()" tabindex="-1">Eliminar <i class="bi bi-trash3-fill"></i></button>
+                    </div>
+                    <div class="col-12 col-md-4 mainBtnRow">
+                        <button id="botonIniciar" type="button" class="btn botonVel botonIniciar w-100 iconoBoton" onclick="iniciar()" tabindex="-1">Iniciar <i class="bi bi-play-fill"></i></button>
+                        <button title="Pausar" id="botonPausar" type="button" class="btn botonVel pausaBtn" onclick="pausar()" tabindex="-1"><i class="bi bi-pause-fill iconoBoton"></i></button>
+                        <button title="Detener" id="botonDetener" type="button" class="btn botonVel pausaBtn" onclick="detener()" tabindex="-1"><i class="bi bi-stop-fill iconoBoton"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js" integrity="" crossorigin=""></script>
+</body>
+</html>
